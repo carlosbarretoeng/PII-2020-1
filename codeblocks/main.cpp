@@ -45,6 +45,18 @@ int ADVERSARIO_FORCA = 10;
 int ADVERSARIO_SABEDORIA = 10;
 
 // BLOCO DE CONTROLE DE FLUXO DE ENTRADAS - INICIO
+
+string ZeroPadNumber(int num)
+{
+	stringstream ss;
+	ss << num;
+	string ret;
+	ss >> ret;
+	int str_length = ret.length();
+	for (int i = 0; i < 2 - str_length; i++) ret = "0" + ret;
+	return ret;
+}
+
 void gotoxy(int x, int y)
 {
     COORD p = {x, y};
@@ -566,9 +578,9 @@ void telaDeSucesso() {
     linha = escreveBlocoDeTexto(L"                            888                                        ", 5, linha);
     linha = escreveBlocoDeTexto(L"                           d88P                                        ", 5, linha);
     linha = escreveBlocoDeTexto(L"                         888P'                                         ", 5, linha);
-    linha = 21;
+    linha = 20;
     linha = escreveBlocoDeTexto(L"PARABÉNS!!! VOCÊ VENCEU O TORNEIO E GARANTIU AOS REDMONDS MAIS 40 ANOS DE POSSES.", 2, linha);
-    linha = escreveBlocoDeTexto(L"Agora aproveite o que aprendeu e volte a jogar obsevando o quanto o Raciocínio Lógico Matemático esta diluído em tudo o que fazemo!.", 2, linha);
+    linha = escreveBlocoDeTexto(L"Agora aproveite o que aprendeu e volte a jogar obsevando o quanto o Raciocínio Lógico Matemático esta diluído em tudo o que fazemos!", 2, linha);
 
     linha = escreveBlocoDeTexto(L" PRESSIONE ENTER ", 61, TELA_ALTURA - 1);
     imprimirMatriz();
@@ -858,17 +870,59 @@ void torneio()
 
     do
     {
-        int rolarDeDados = rand() % 6 + 1;
+        int rolarDeDados = rand() % 3 - 1;
 
-        wcout << L"-----------------" << endl;
-        wcout << L"Personagem vida: " << PERSONAGEM_VIDA << endl;
-        wcout << L"Adversário vida: " << ADVERSARIO_VIDA << endl;
-        wcout << L"Atacar ou defender?" << endl;
+        int linha = 1;
+        limparTela();
+        inicializaMatriz();
+        linha = escreveBlocoDeTexto(L"CENTRO UNIVERSITÁRIO GOVERNADOR OZANAN COELHO - UNIFAGOC", 11, linha);
+        linha = escreveBlocoDeTexto(L"CIÊNCIA DA COMPUTAÇÃO - PROJETO INTEGRADOR I - PROJETO R", 11, linha);
+        linha = escreveLinhaHorizontal(linha);
+        linha = escreveBlocoDeTexto(L"___  __   __        ___    __  ", 24, linha);
+        linha = escreveBlocoDeTexto(L" |  /  \\ |__) |\\ | |__  | /  \\ ", 24, linha);
+        linha = escreveBlocoDeTexto(L" |  \\__/ |  \\ | \\| |___ | \\__/ ", 24, linha);
+        linha = escreveLinhaHorizontal(++linha);
+        linha = escreveBlocoDeTexto(L"" + PERSONAGEM_NOME, 2, linha);
+        wstring vidaPersonagem = L"";
+        StringToWString(vidaPersonagem,ZeroPadNumber(PERSONAGEM_VIDA));
+        wstring vidaAdversario = L"";
+        StringToWString(vidaAdversario,ZeroPadNumber(ADVERSARIO_VIDA));
+        linha = escreveBlocoDeTexto(L"(" + vidaPersonagem + L") x (" + vidaAdversario + L")", 38, --linha);
+        linha = escreveBlocoDeTexto(L"" + ADVERSARIO_NOME, (TELA_LARGURA - ADVERSARIO_NOME.length() - 2), --linha);
+        linha++;
+        for(int i=0; i<PERSONAGEM_VIDA; i++){
+            linha = escreveBlocoDeTexto(L"█", 36 - i, --linha);
+        }
+        for(int i=0; i<ADVERSARIO_VIDA; i++){
+            linha = escreveBlocoDeTexto(L"█", 40 + i, --linha);
+        }
+
+        linha = escreveBlocoDeTexto(L"Você precisa escolhar seu próximo movimento. Seja sábio em sua escolha e messa bem seu passos!", 2, TELA_ALTURA - 10);
+        linha = escreveBlocoDeTexto(L"O que deseja fazer?", 2, linha);
+
+        /*linha = escreveBlocoDeTexto(L"" + to_wstring(rolarDeDados), 2, TELA_ALTURA - 10);
+        linha = escreveBlocoDeTexto(L"" + to_wstring(modificadorAtaque), 2, TELA_ALTURA - 9);
+        linha = escreveBlocoDeTexto(L"" + to_wstring(modificadorDefesa), 2, TELA_ALTURA - 8);*/
+
+        linha = escreveBlocoDeTexto(L" A ou a - Para atacar", 2, TELA_ALTURA - 3);
+        linha = escreveBlocoDeTexto(L" D ou d - Para defender", 2, TELA_ALTURA - 2);
+        imprimirMatriz();
+
         char opcao = aguardaCaracter("aAdD");
 
         if (opcao == 'A')
         {
             int dano = rolarDeDados + modificadorAtaque;
+            if (dano > 0)
+            {
+                ADVERSARIO_VIDA -= dano;
+            }
+            if (dano < 0)
+            {
+                PERSONAGEM_VIDA += dano;
+            }
+        } else{
+            int dano = rolarDeDados + modificadorDefesa;
             if (dano > 0)
             {
                 ADVERSARIO_VIDA -= dano;
@@ -907,7 +961,7 @@ int main()
     _setmode(_fileno(stdout), _O_U16TEXT);
     srand(time(NULL));
 
-    /*telaDeConfiguracaoDoTerminal();
+    telaDeConfiguracaoDoTerminal();
     telaDeApresentacao();
     telaDeIntroducaoDaHistoria();
     telaDeSelecaoDeDificuldadeENomeDoPersonagem();
@@ -939,18 +993,18 @@ int main()
         telaDeGameOver();
         telaDeCreditos();
         return 0;
-    }/**/
+    }
 
     torneio();
 
-    /*if(PERSONAGEM_VIDA <= 0){
+    if(PERSONAGEM_VIDA <= 0){
         telaDeGameOver();
         telaDeCreditos();
         return 0;
     }
 
     telaDeSucesso();
-    telaDeCreditos();/**/
+    telaDeCreditos();
 
     return 0;
 }
