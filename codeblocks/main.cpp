@@ -907,7 +907,7 @@ int main()
     _setmode(_fileno(stdout), _O_U16TEXT);
     srand(time(NULL));
 
-    telaDeConfiguracaoDoTerminal();
+    /*telaDeConfiguracaoDoTerminal();
     telaDeApresentacao();
     telaDeIntroducaoDaHistoria();
     telaDeSelecaoDeDificuldadeENomeDoPersonagem();
@@ -943,14 +943,14 @@ int main()
 
     torneio();
 
-    if(PERSONAGEM_VIDA <= 0){
+    /*if(PERSONAGEM_VIDA <= 0){
         telaDeGameOver();
         telaDeCreditos();
         return 0;
     }
 
     telaDeSucesso();
-    telaDeCreditos();
+    telaDeCreditos();/**/
 
     return 0;
 }
