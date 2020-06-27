@@ -1,0 +1,201 @@
+{
+  "cenario1": [
+    {
+      "descricao": [
+        "Voc? anda um pouco e depara-se com um vilarejo brilhante e vivido! Era a Vila Dourada. Uma vila que vivia a grande burguesia.",
+        "Ao aproximar-se voce ve a esquerda, grandes casas espalhadas, a maioria com grandes ornamentos e janelas reluzentes, uma igreja enorme, encrustada de pedras preciosas e mais a frente uma feira livre com os mais variados produtos..., a direita voce ve uma grande ferraria, repleta de lindas armas e armaduras brilhantes, uma taverna limpa e com bebados educados, uma roda ancioes em volta de uma fogueira e crianças brincando ao redor.",
+        "E uma vila muito vivida, que esbanja luxos e e rejeita os menos afortunados. Voce fica pensando em outras vilas que nao tem a mesma sorte..."
+      ],
+      "opcoes": ["Ir a taverna", "Consultar os ancioes", "Ir a ferraria"],
+      "acoes":[
+        {
+          "op": 1,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 5,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        }
+      ]
+    },
+    
+    {
+      "descricao": [
+        "Voce dirige-se a taverna.",
+        "Entrando, voce ve a bancada com o bartender atras, ve uma mesa repleta de guardas carrancudos, em outra mesa velhos bebendo e falando besteiras e algumas crianças e adolecentes trabalhando no recinto.",
+        "Voce repara um pouco mais e ve ratos e baratas peranbulando por todo o bar, pessoas urinando nos cantos, algumas brigas e sente o terrivel odor do recinto. Era um lugar repugnante, mas voce ve uma oportunidade de conseguir alguma experiencia."
+      ],
+      "opcoes": ["Ir falar com os guardas", "Falar com o bartender", "Pedir aos velhos informaçoes"],
+      "acoes": [
+        {
+          "op": 2,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 3,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 4,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        }
+      ]
+    },
+    
+    {
+      "descricao": [
+        "Voce se aproxima dos guardas, sente um odor forte, mas avança mesmo assim. Eles olham pra voce e um deles diz:",
+        "- Olha rapazes, o escolhido! O que lhe tras aqui garoto?",
+        "- Preciso me fortalecer para o maldito torneio!",
+        "O guarda, curioso, diz:",
+        "- Bom, se voce conseguir resolver um pequeno probleminha, talvez um possa lhe ajudar... Vamos la entao! Sera um problema que envolve um pouco de logica, entao...basta usar a cabeça. Para fazer corretamente uma vigia em turnos, o primeiro guarda, no primeiro turno, so pode sair da sua vigia (A) quando o segundo chegar na hora determinada e realizar a troca de turno (B). Sendo assim qual o conectivo correto para a frase?"
+      ],
+      "opcoes": ["B -> A", "A -> B", "A <-> B"],
+      "acoes": [
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": 0,
+          "mensagem": [
+            "Chegou perto parceiro...Hahahaha!",
+            "",
+            "Mas a resposta correta seria 'A -> B'. POr ter chegado bem perto, n?o será penalizado."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": 2,
+          "mensagem": [
+            "Na mosca!!! Voc? acertou, camarada!",
+            "",
+            "Venha, vou lhe ensinar uns truque para aproveitar esses 2 pontos de FORÇA que acabou de ganhar."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": -1,
+          "mensagem": [
+            "De jeito nenhum, cara!",
+            "",
+            "Mas a resposta correta seria 'A -> B'. Por isso, voc? perdeu 1 pontos em FORÇA.",
+            "",
+            "Lembre-se, nem só com força se vence uma batalha"
+          ]
+        }
+      ]
+    },
+    
+    {
+      "descricao":[
+        "Voce dirige-se a bancada do bar. O bartender se aproxima.",
+        "- O que quer beber rapaz?",
+        "- Nao quero beber nada, preciso me fortalecer!",
+        "O bartender olha bem pra voce e diz:",
+        "- Por que nao falar com os guardas ou entao os velhos ali. Acho que podem te fornecer alguma experiencia."
+      ],
+      "opcoes": ["Voltar"],
+      "acoes":[{
+        "op": 1,
+        "caracteristica": "",
+        "mod": 0,
+        "mensagem": ""
+      }]
+    },
+
+    {
+      "descricao":[
+        "Voce analisa os velhos beberroes... Parecem sabios, vamos ver no que vai dar. Ssenta perto deles e percebe o forte cheiro de alcool. Ja devem estar embriagados... Um deles pergunta:",
+        "- O que voce quer com a gente rapaz ?",
+        "Voce, meio sem paciencia, responde:",
+        "- Voces parecem sabios.Teriam alguma coisa para me ajudar no maldito torneio?",
+        "Eles olham entre si e respondem:",
+        "- Huummmm...Talvez, se voce resolver a nossa charada, talvez lhe ajudemos com algo.",
+        "- Pode falar!",
+        "Toda manha que faz sol (A), eu e os rapazes descemos para a taverna beber umas cervejas (B).",
+        "Qual seria o conectivo correto para a frase?"
+      ],
+      "opcoes": ["A -> B", "B v A -> B", "B -> A"],
+      "acoes":[
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": 0,
+          "mensagem": ["Passou perto garotao...Hahaha"]
+        },
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": -1,
+          "mensagem": [
+            "N?o!!! Esta errada!", 
+            "O correto é 'B -> A'", 
+            "Use mais a cabeça na próxima, pq agora vc perdeu 1 ponto de SABEDORIA."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": 2,
+          "mensagem": [
+            "Dale garotoo! Muito bem sabichao!",
+            "Agora vou lhe contar uns truques que vc pode usar no torneio...",
+            "Tome! Junte esses 2 pontos a mais de SABEDORIA no seu cerebro!"
+          ]
+        }
+      ]
+    },
+
+    {
+      "descricao":[
+        "Voce primeiramente olha de longe o grupo, para ver com o que irá lidar. Parece ser apenas senhores conversando, nada de mais. Voce se aproxima e pede para juntar-se a eles.",
+        "O mais velho do grupo fica intrigado com a sua presença e pergunta:",
+        "- O que lhe tras aqui rapaz?",
+        "-Estou em busca de experiencia. O grande torneio esta chegando, preciso me preparar!",
+        "-Entendo... Nesse caso vou continuar a historia que estava contando e depois quero que vc responda a uma pergunta. Se voce acertar lhe darei mais algumas informaçoes e ganhara alguns pontos de VIDA.",
+        "Voce escuta atentamente a historia do senhorzinho, sente-se inspirado e diz:",
+        "- Muito bem, foi uma otima historia, muito obrigado por compartilhar comigo. Mas agora qual sua pergunta?",
+        "O velho entao lhe faz a pergunta:",
+        "- Ela envolve raciocinio logico, meu caro. Cuidado com sua resposta.",
+        "Impaciente, voce diz:",
+        "- Pode mandar!",
+        null,
+        "- A pergunta envolve uma parte da historia que contei. Vamos la. Eu e meu amigo fomos a taverna, la pedi um caneco de cerveja (A) enquanto ele pediu um prato de pe de porco assado (B). A pergunta e o seguinte:",
+        "Qual o conectivo correto para a frase?"
+      ],
+      "opcoes": ["A ? B", "A v B", "A -> B", "A <-> B"],
+      "acoes":[
+        {
+          "op": 0,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": [""]
+        }
+      ]
+    },
+
+    {
+      "descricao":[],
+      "opcoes": [],
+      "acoes":[
+        {
+          "op": 0,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": [""]
+        }
+      ]
+    }
+  ] 
+}
