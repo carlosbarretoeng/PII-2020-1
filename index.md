@@ -9,3 +9,8 @@ Em um tempo muito diferente do nosso, um peque pedaço de terra é disputado a g
 ### 3. Flowchart
 
 ### 4. Source Code
+
+### 5. Throbleshoting
+* Meu jogo esta deconfigurado. O que fazer?
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3FzXb4rsZIs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

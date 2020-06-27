@@ -929,8 +929,8 @@ int main()
         }
         else
         {
-            /* numeroAleatorio = rand() % 3;
-            apresentaCenario(3, numeroAleatorio, 0);*/
+            numeroAleatorio = rand() % 3;
+            apresentaCenario(3, numeroAleatorio, 0);
         }
         treinamento = testeCondicoesParaTreinamento();
     } while (treinamento);
@@ -939,7 +939,7 @@ int main()
         telaDeGameOver();
         telaDeCreditos();
         return 0;
-    }
+    }/**/
 
     torneio();
 
