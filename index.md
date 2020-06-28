@@ -12,7 +12,7 @@ Em um tempo muito diferente do nosso, um peque pedaço de terra é disputado a g
 
 ## Documentação
 * [Project Model Canvas](docs/PMC.png)
-* [Fluxograma](docs/fluxograma.bmp)
+* [Fluxograma](docs/fluxograma-v2.bmp)
 * [Descrição Narrativa](docs/PROJETO R.pdf)
 
 
