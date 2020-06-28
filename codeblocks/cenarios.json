@@ -1425,5 +1425,200 @@
         }
       ]
     }
-  ]
+  ],
+  "cenario3.0": [
+    {
+      "descricao": [
+        "Voce decide explorar o bosque que existe nos arredores do Reino.Enquanto voce ia camninhando bosque a dentro explorando e observando a paisagem ate entao desconhecida a ele.\n"    ,
+        "Voce repara e avista um rastro de fumaça acima da copa das arvores,",
+        "O que deseja fazer? 1- Seguir o rastro de fumaçao 2-Ignorar e seguir explorando. 3-Refletir sobre o que fazer :"
+      ],
+      "opcoes": ["Seguir o rastro de fumaça,Ignorar e seguir explorando,Refletir sobre o que fazer"],
+      "acoes":[
+        {
+          "op": 1,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 5,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 6,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        }
+      ]
+    },
+    
+    {
+      "descricao": [
+        "Voce decide ignorar o rastro e seguir explorando.",
+        "Voce segue para o lado contrario do rastro mas a alguns metros voce começa a pensar o que poderia ser aquilo e como sua curiosidade e sua sede do desconhecido falam voce decide voltar ao local que havia avistado o rastro"
+      ],
+      "opcoes": ["Seguir o rastro de fumaça,Ignorar e seguir explorando,Refletir sobre o que fazer"],
+      "acoes": [
+        {
+          "op": 2,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 3,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        },
+        {
+          "op": 4,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": ""
+        }
+      ]
+    },
+    
+    {
+      "descricao": [
+        "Voce decide seguir o rastro e procurar o local de origem do rastro. Chegando na origem alguem lhe avista e diz: -O que faz aqui rapaz?! -Estava explorando a floresta e vi o rastro entao decidi segui-lo quem e voce? O homem,que ali estava respondeu: -Eu posso lhe dizer mas apenas se voce resolver um pequeno problema de logica.",
+        "-Vamos la entao. -Pense bem antes de responder,caso erre nao lhe direi nada.",
+        "Se hoje esta fazendo sol e nao chover,nao vou me molhar.Sendo assim qual o conectivo correto para a frase?"
+      ],
+      "opcoes": [" B->A' A->B', A<->B, A v B, A ^ B : "],
+      "acoes": [
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": 0,
+          "mensagem": [
+            "Foi quase... Tente outra vez!",
+            "",
+            "Mas a resposta correta seria 'A -> B'. POr ter chegado bem perto, n?o ser� penalizado."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": 2,
+          "mensagem": [
+            "Correto!Agora irei lhe dizer que eu sou.",
+            "",
+            "Venha, vou lhe ensinar uns truque para aproveitar esses 2 pontos de FOR�A que acabou de ganhar."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "FORCA",
+          "mod": -1,
+          "mensagem": [
+            "Errado!",
+            "",
+            "Mas a resposta correta seria 'A -> B'. Por isso, voc? perdeu 1 pontos em FOR�A.",
+            "",
+            "Lembre-se, nem s� com for�a se vence uma batalha"
+          ]
+        }
+      ]
+    },
+    
+    {
+      "descricao":[
+          "Voce ignora o rastro de fumaça e continua explorando.",       
+          " Mas a voz de sua consciencia diz:-Voce deveria seguir aquele rastro.Deve haver algo no inicio dele!",
+          "Voce continua refletindo por um tempo.",
+         "Depois de algum tempo pensando voce olha para o ceu procurando o rastro de fumaça"
+      ],
+      "opcoes": ["Voltar"],
+      "acoes":[{
+        "op": 1,
+        "caracteristica": "",
+        "mod": 0,
+        "mensagem": ""
+      }]
+    },
+  
+    {
+      "descricao":[
+          "Voce decide pensar sobre o que fazer,Seguir ou nao seguir!?.",
+          "Eis que enquanto voce pensava passou um senhor.",
+          "Ele entao pergunta: -O que fazendo meu jovem?.",
+         "Voce entao que estava imerso em seus pensamentos retorna a realidade e responde: -Estava aqui pensando o que fazer se deveria seguir aquele rastro de fumaça ou nao?Entao voce aponta o rastro no ceu",
+       "O senhor diz: -A aquele rastro e da minha cabana,deixei algo cozinhando la enquanto sai.Talvez,se voce resolver este pequeno problema enquanto caminhamos ate la eu possa lhe mostrar e ainda lhe oferecer um pouco.",
+         "Voce diz: -Pode falar!",
+          "Todo dia faz sol e eu vou a cidade.Qual seria o conectivo correto para a frase?"
+      ],
+      "opcoes": ["A -> B", "B v A -> B", "B -> A"],
+      "acoes":[
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": 0,
+          "mensagem": ["...Hahaha"]
+        },
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": -1,
+          "mensagem": [
+            "N?o!!! Voce errou!", 
+            "O correto � 'A -> B '", 
+            "Use mais a cabe�a na pr�xima, pq agora vc perdeu 1 ponto de SABEDORIA."
+          ]
+        },
+        {
+          "op": -1,
+          "caracteristica": "SABEDORIA",
+          "mod": 2,
+          "mensagem": [
+            "Parabens voce e esperto.",
+            "Quando chegar la irei lhe lhe oferecer o que eu tinha deixado cozinhando...",
+            "Tome!Quem sabe a comida nao te 2 Pontos mais esperto"
+          ]
+        }
+      ]
+    },
+  
+    {
+      "descricao":[
+          "Voce decide ir ao bosque que havia perto do reino. Parece apenas ser um local calmo, nada de mais. Voce adentra o local e começa a procurar o que ha ali.",
+          "Apos algum tempo voce encontra um pequeno local aberto e bem cuidado com uma construçao.Um senhor avista voce observando a cabana dele e pergunta",
+           " -O que faz aqui meu jovem?Voce responde:Estava aqui andando pelo bosque e encontrei esta cabana ela e sua?",
+         "O senhor entao diz:\n -Sim ela e minha.Gostaria de lhe convidar para entrar mas primeiro vou lhe contar uma historia e depois lhe fazer uma pergunta.",
+           "Voce escuta atentamente a historia do senhorzinho, e terminado a historia vc diz: -,Gostei da historia,muito boa.Mas agora qual sua pergunta?",
+           "O senhorzinho entao lhe faz a pergunta: -Ela envolve raciocinio.Pense antes de responder .",
+          "Animado apos a historia, voce diz: -Manda!",
+        null,
+        "A pergunta envolve uma parte da historia que contei. Vamos la.Um dia fui a cidade, la eu comprei frutas. A pergunta e o seguinte:",
+        "Qual o conectivo correto para a frase?"
+      ],
+      "opcoes": ["A ? B", "A v B", "A -> B", "A <-> B"],
+      "acoes":[
+        {
+          "op": 0,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": [""]
+        }
+      ]
+    },
+  
+    {
+      "descricao":[],
+      "opcoes": [],
+      "acoes":[
+        {
+          "op": 0,
+          "caracteristica": "",
+          "mod": 0,
+          "mensagem": [""]
+        }
+      ]
+    }
+  ] 
 }
